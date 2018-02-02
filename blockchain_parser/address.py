@@ -49,7 +49,7 @@ class Address(object):
     def address(self):
         """Returns the base58 encoded representation of this address"""
         if self._address is None:
-            version = b'\x00' if self.type == "normal" else b'\x05'
+            version = b'\x30' if self.type == "normal" else b'\x32'
             checksum = double_sha256(version + self.hash)
 
             self._address = base58.encode(version + self.hash + checksum[:4])
