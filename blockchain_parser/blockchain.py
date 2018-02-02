@@ -17,7 +17,7 @@ from .block import Block
 
 
 # Constant separating blocks in the .blk files
-BITCOIN_CONSTANT = b"\xf9\xbe\xb4\xd9"
+BITCOIN_CONSTANT = b"\xfb\xc0\xb6\xdb"
 
 
 def get_files(path):
